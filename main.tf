@@ -3,6 +3,9 @@ provider "aws"{
 }
 
 resource "aws_instance" "nil_server" {
-   ami          = "ami-0b152cfd354c4c7a4"
+  ami          = "ami-0b152cfd354c4c7a4"
   instance_type = "t2.micro"
+  tags         = {
+        Name = "nil_inst_from_terra_cloud"
+  } 
 }
